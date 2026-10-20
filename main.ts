@@ -1,6 +1,7 @@
 input.onButtonPressed(Button.A, function () {
     function playMusic (){
-       music.play(music.stringPlayable("C5 B A G F E D C ", 190), music.PlaybackMode.UntilDone)
+        music.play(music.stringPlayable("C5 B A G F E D C ", 190), music.PlaybackMode.UntilDone)
+       
    }
 plotgame()
     basic.showLeds(`
@@ -119,6 +120,8 @@ plotgame()
         # . . # .
         `)
     playMusic();
+basic.showIcon(IconNames.Happy)
+    music.play(music.stringPlayable("C D E F G A B C5 ", 120), music.PlaybackMode.UntilDone)
 })
 function plotgame () {
     led.plot(1, 0)
